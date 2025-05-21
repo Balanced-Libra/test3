@@ -741,6 +741,17 @@
     </footer>
 
     <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltip = document.querySelector('.group span');
+            setTimeout(() => {
+                tooltip.classList.add('opacity-100');
+                setTimeout(() => {
+                    tooltip.classList.remove('opacity-100');
+                }, 3000); // Tooltip disappears after 3 seconds
+            }, 2000); // Tooltip appears after 2 seconds
+        });
+        
         // Initialize AOS
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init({
