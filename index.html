@@ -401,21 +401,28 @@
     <div class="container mx-auto px-4 py-8 flex-grow">
 
         <!-- Navigation bar -->
-        <nav style="background-color: #1a1a1a; padding: 15px 0; position: fixed; top: 0; width: 100%; left: 0; margin: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-            <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 30px;">
-                <li><a href="#vorteile" style="color: white; text-decoration: none; font-family: Arial, sans-serif; font-size: 16px;">Vorteile</a></li>
-                <li><a href="#funktionsweise" style="color: white; text-decoration: none; font-family: Arial, sans-serif; font-size: 16px;">Funktionsweise</a></li>
-                <li><a href="#modelle" style="color: white; text-decoration: none; font-family: Arial, sans-serif; font-size: 16px;">Modelle</a></li>
-                <li><a href="#einsatzorte" style="color: white; text-decoration: none; font-family: Arial, sans-serif; font-size: 16px;">Einsatzorte</a></li>
-                <li><a href="#kontakt" style="color: white; text-decoration: none; font-family: Arial, sans-serif; font-size: 16px;">Kontakt</a></li>
-            </ul>
+        <nav style="background-color: #1a1a1a; padding: 15px 20px; position: sticky; top: 0; z-index: 1000;">
+            <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px;">
+                    <li><a href="#vorteile" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;">Vorteile</a></li>
+                    <li><a href="#funktionsweise" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;">Funktionsweise</a></li>
+                    <li><a href="#modelle" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;">Modelle</a></li>
+                    <li><a href="#einsatzorte" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;">Einsatzorte</a></li>
+                    <li><a href="#kontakt" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;">Kontakt</a></li>
+                </ul>
+            </div>
+            <style>
+                @media (max-width: 600px) {
+                    nav ul {
+                        justify-content: center;
+                        gap: 10px;
+                    }
+                    nav ul li a {
+                        font-size: 14px;
+                    }
+                }
+            </style>
         </nav>
-        <!-- Add padding to the body to avoid content being hidden under the fixed navbar -->
-        <style>
-        body {
-            padding-top: 60px;
-        }
-        </style>
 
         <!-- Hero Section -->
         <section class="flex flex-col md:flex-row items-center justify-between min-h-[80vh] py-12" data-aos="fade-up" data-aos-duration="1000">
